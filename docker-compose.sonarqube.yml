@@ -9,8 +9,14 @@ services:
       - sonarqube_data:/opt/sonarqube/data
       - sonarqube_logs:/opt/sonarqube/logs
       - sonarqube_extensions:/opt/sonarqube/extensions
+    networks:
+      - tech_debt_ai_default
 
 volumes:
   sonarqube_data:
   sonarqube_logs:
-  sonarqube_extensions: 
+  sonarqube_extensions:
+
+networks:
+  tech_debt_ai_default:
+    external: true 
