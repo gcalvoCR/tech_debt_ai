@@ -155,8 +155,9 @@ const CourseForm = () => {
             <Row>
               <Col md={8}>
                 <Form.Group className="mb-3">
-                  <Form.Label>Título del Curso</Form.Label>
+                  <Form.Label htmlFor="title">Título del Curso</Form.Label>
                   <Form.Control
+                    id="title"
                     type="text"
                     name="title"
                     value={formData.title}
@@ -172,8 +173,9 @@ const CourseForm = () => {
               
               <Col md={4}>
                 <Form.Group className="mb-3">
-                  <Form.Label>Código del Curso</Form.Label>
+                  <Form.Label htmlFor="code">Código del Curso</Form.Label>
                   <Form.Control
+                    id="code"
                     type="text"
                     name="code"
                     value={formData.code}
@@ -189,8 +191,9 @@ const CourseForm = () => {
             </Row>
             
             <Form.Group className="mb-3">
-              <Form.Label>Descripción</Form.Label>
+              <Form.Label htmlFor="description">Descripción</Form.Label>
               <Form.Control
+                id="description"
                 as="textarea"
                 rows={4}
                 name="description"
@@ -200,8 +203,9 @@ const CourseForm = () => {
             </Form.Group>
             
             <Form.Group className="mb-3">
-              <Form.Label>Instructor</Form.Label>
+              <Form.Label htmlFor="instructorId">Instructor</Form.Label>
               <Form.Select
+                id="instructorId"
                 name="instructorId"
                 value={formData.instructorId || ''}
                 onChange={handleChange}
@@ -218,8 +222,9 @@ const CourseForm = () => {
             <Row>
               <Col md={6}>
                 <Form.Group className="mb-3">
-                  <Form.Label>Fecha de inicio</Form.Label>
+                  <Form.Label htmlFor="startDate">Fecha de inicio</Form.Label>
                   <Form.Control
+                    id="startDate"
                     type="date"
                     name="startDate"
                     value={formData.startDate}
@@ -230,8 +235,9 @@ const CourseForm = () => {
               
               <Col md={6}>
                 <Form.Group className="mb-3">
-                  <Form.Label>Fecha de finalización</Form.Label>
+                  <Form.Label htmlFor="endDate">Fecha de finalización</Form.Label>
                   <Form.Control
+                    id="endDate"
                     type="date"
                     name="endDate"
                     value={formData.endDate}
